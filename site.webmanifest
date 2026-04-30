@@ -1,0 +1,10 @@
+{
+  "name": "Maison Direct",
+  "short_name": "Maison Direct",
+  "icons": [
+    { "src": "assets/icons/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ],
+  "theme_color": "#071f3f",
+  "background_color": "#f4f7fb",
+  "display": "standalone"
+}

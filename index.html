@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maison Direct — Solutions logement</title>
+  <meta name="description" content="Fuite d’eau, plomberie, chauffage, travaux ou énergie : trouvez rapidement une solution adaptée à votre besoin." />
+  <link rel="canonical" href="https://maisondirect.fr/" />
+  <meta name="theme-color" content="#071f3f" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Maison Direct — Solutions logement" />
+  <meta property="og:description" content="Plomberie, fuite, chauffage, travaux ou énergie : accédez rapidement à une solution adaptée." />
+  <meta property="og:url" content="https://maisondirect.fr/" />
+  <meta property="og:image" content="https://maisondirect.fr/assets/img/og-maison-direct.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <link rel="preload" as="image" href="assets/img/plombier-sous-evier-1200.webp" imagesrcset="assets/img/plombier-sous-evier-800.webp 800w, assets/img/plombier-sous-evier-1200.webp 1200w, assets/img/plombier-sous-evier-1672.webp 1672w" imagesizes="100vw" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Maison Direct",
+    "url": "https://maisondirect.fr/",
+    "description": "Service de mise en relation pour les besoins liés au logement : plomberie, chauffage, travaux et énergie."
+  }
+  </script>
+
+  <style>
+    :root {
+      --blue: #1769ff;
+      --blue-dark: #071f3f;
+      --green: #28a65a;
+      --orange: #ff9f1c;
+      --red: #ef3e36;
+      --bg: #f4f7fb;
+      --text: #0b2341;
+      --muted: #617083;
+      --card: #ffffff;
+      --border: #e4ebf3;
+      --shadow: 0 22px 60px rgba(7, 31, 63, 0.14);
+      --soft-shadow: 0 14px 38px rgba(7, 31, 63, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 78vh;
+      padding: 34px 6vw 86px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #071f3f;
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+      display: block;
+      overflow: hidden;
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right center;
+      transform: scale(1.02);
+      display: block;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg,
+          rgba(7, 31, 63, 0.96) 0%,
+          rgba(7, 31, 63, 0.86) 34%,
+          rgba(7, 31, 63, 0.52) 62%,
+          rgba(7, 31, 63, 0.14) 100%),
+        linear-gradient(180deg,
+          rgba(7, 31, 63, 0.16) 0%,
+          rgba(7, 31, 63, 0.02) 48%,
+          rgba(244, 247, 251, 0.96) 100%);
+      pointer-events: none;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 950;
+      font-size: 25px;
+      letter-spacing: -0.045em;
+      color: #ffffff;
+      text-shadow: 0 2px 18px rgba(0,0,0,0.24);
+      white-space: nowrap;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+    }
+
+    .brand-text {
+      display: inline-flex;
+      align-items: center;
+      height: 38px;
+      line-height: 1;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      display: block;
+      filter: drop-shadow(0 2px 12px rgba(0,0,0,0.24));
+    }
+
+    .logo-roof,
+    .logo-house,
+    .logo-door,
+    .logo-spark {
+      fill: none;
+      stroke: #ffffff;
+      stroke-width: 5.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .logo-spark {
+      stroke-width: 4.4;
+      opacity: 0.95;
+    }
+
+    .tagline {
+      color: rgba(255,255,255,0.92);
+      font-size: 17px;
+      font-weight: 750;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.28);
+    }
+
+    .hero-content {
+      width: min(820px, 100%);
+      margin: 92px 0 0;
+      text-align: left;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(46px, 7vw, 88px);
+      line-height: 0.96;
+      letter-spacing: -0.075em;
+      color: #ffffff;
+      text-shadow: 0 6px 34px rgba(0,0,0,0.34);
+      max-width: 900px;
+    }
+
+    .hero-text {
+      margin: 30px 0 0;
+      font-size: clamp(21px, 2.2vw, 31px);
+      line-height: 1.45;
+      color: rgba(255,255,255,0.92);
+      max-width: 820px;
+      text-shadow: 0 3px 24px rgba(0,0,0,0.32);
+    }
+
+    .hero-actions {
+      margin-top: 36px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .primary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--blue);
+      color: #ffffff;
+      border-radius: 16px;
+      padding: 18px 28px;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      box-shadow: 0 16px 36px rgba(23,105,255,0.34);
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: #0f5de6;
+      box-shadow: 0 22px 46px rgba(23,105,255,0.42);
+    }
+
+    .secondary-note {
+      color: rgba(255,255,255,0.78);
+      font-size: 15px;
+      font-weight: 650;
+      text-shadow: 0 2px 14px rgba(0,0,0,0.28);
+    }
+
+    #solutions { scroll-margin-top: 24px; }
+
+    .section { padding: 76px 6vw; }
+
+    .section.white {
+      background: var(--bg);
+      padding-top: 44px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(32px, 4vw, 48px);
+      letter-spacing: -0.06em;
+      margin: 0 0 13px;
+      color: var(--blue-dark);
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 42px;
+      font-size: 18px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .solutions {
+      width: min(1060px, 100%);
+      margin: 0 auto;
+      display: grid;
+      gap: 18px;
+    }
+
+    .solution-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 82px 1fr 56px;
+      gap: 24px;
+      align-items: center;
+      padding: 26px;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(228,235,243,0.95);
+      border-radius: 28px;
+      box-shadow: var(--soft-shadow);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+      overflow: hidden;
+    }
+
+    .solution-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity .18s ease;
+      background: linear-gradient(135deg, rgba(23,105,255,0.08), rgba(255,255,255,0));
+      pointer-events: none;
+    }
+
+    .solution-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+      border-color: rgba(23,105,255,0.28);
+      background: #ffffff;
+    }
+
+    .solution-card:hover::before { opacity: 1; }
+
+    .icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 25px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 38px;
+      font-weight: 900;
+      box-shadow: 0 14px 32px rgba(7,31,63,0.14);
+      position: relative;
+      z-index: 1;
+    }
+
+    .red { background: linear-gradient(135deg, var(--red), #ff7c6d); }
+    .orange { background: linear-gradient(135deg, var(--orange), #ffc766); }
+    .blue { background: linear-gradient(135deg, var(--blue), #56a0ff); }
+    .green { background: linear-gradient(135deg, var(--green), #79dc80); }
+
+    .solution-card h3 {
+      margin: 0 0 8px;
+      font-size: clamp(23px, 3vw, 31px);
+      letter-spacing: -0.045em;
+      color: var(--blue-dark);
+      position: relative;
+      z-index: 1;
+    }
+
+    .solution-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.5;
+      position: relative;
+      z-index: 1;
+    }
+
+    .arrow {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: rgba(23,105,255,0.1);
+      display: grid;
+      place-items: center;
+      color: var(--blue);
+      font-size: 30px;
+      font-weight: 900;
+      position: relative;
+      z-index: 1;
+      transition: transform .18s ease, background .18s ease;
+    }
+
+    .solution-card:hover .arrow {
+      transform: translateX(3px);
+      background: rgba(23,105,255,0.16);
+    }
+
+    .trust-section {
+      background:
+        radial-gradient(circle at 20% 0%, rgba(23,105,255,0.09), transparent 36%),
+        radial-gradient(circle at 80% 100%, rgba(40,166,90,0.08), transparent 34%),
+        #ffffff;
+    }
+
+    .trust-grid {
+      width: min(1060px, 100%);
+      margin: 42px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .trust-item {
+      background: rgba(255,255,255,0.9);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 32px 26px;
+      text-align: center;
+      box-shadow: 0 12px 34px rgba(7,31,63,0.06);
+    }
+
+    .trust-item .trust-icon {
+      width: 64px;
+      height: 64px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 16px;
+      font-size: 32px;
+      border-radius: 22px;
+      background: rgba(23,105,255,0.08);
+    }
+
+    .trust-item h4 {
+      margin: 0 0 9px;
+      font-size: 21px;
+      color: var(--blue-dark);
+      letter-spacing: -0.03em;
+    }
+
+    .trust-item p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.58;
+    }
+
+    .footer {
+      padding: 30px 6vw;
+      background: var(--blue-dark);
+      color: white;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer-inner {
+      width: min(1060px, 100%);
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 820px) {
+      .hero {
+        min-height: 74vh;
+        padding: 24px 24px 62px;
+      }
+
+      .hero-media img {
+        object-position: 62% center;
+        transform: scale(1.03);
+      }
+
+      .hero::after {
+        background:
+          linear-gradient(180deg,
+            rgba(7,31,63,0.93) 0%,
+            rgba(7,31,63,0.76) 52%,
+            rgba(7,31,63,0.34) 78%,
+            rgba(244,247,251,0.94) 100%);
+      }
+
+      .tagline { display: none; }
+
+      .brand { font-size: 22px; gap: 10px; }
+
+      .brand-icon { width: 34px; height: 34px; }
+
+      .brand-text { height: 34px; }
+
+      .logo-mark { width: 31px; height: 31px; }
+
+      .hero-content { margin-top: 58px; }
+
+      h1 { font-size: clamp(42px, 12vw, 64px); }
+
+      .hero-text { font-size: 20px; }
+
+      .primary-btn {
+        width: 100%;
+        padding: 17px 22px;
+        font-size: 18px;
+      }
+
+      .secondary-note { width: 100%; }
+
+      .section { padding: 58px 22px; }
+
+      .section.white { padding-top: 34px; }
+
+      .solution-card {
+        grid-template-columns: 64px 1fr;
+        padding: 20px;
+        gap: 16px;
+        border-radius: 24px;
+      }
+
+      .icon {
+        width: 64px;
+        height: 64px;
+        font-size: 30px;
+        border-radius: 20px;
+      }
+
+      .arrow { display: none; }
+
+      .trust-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <picture class="hero-media">
+        <source type="image/webp" srcset="assets/img/plombier-sous-evier-800.webp 800w, assets/img/plombier-sous-evier-1200.webp 1200w, assets/img/plombier-sous-evier-1672.webp 1672w" sizes="100vw" />
+        <img src="assets/img/plombier-sous-evier-1200.webp" alt="Plombier réparant une canalisation sous un évier" width="1672" height="941" fetchpriority="high" decoding="async" />
+      </picture>
+
+      <header class="nav">
+        <a href="#" class="brand" aria-label="Maison Direct accueil">
+          <span class="brand-icon" aria-hidden="true">
+            <svg class="logo-mark" viewBox="0 0 64 64" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <path class="logo-roof" d="M12 31.5L32 15l20 16.5" />
+              <path class="logo-house" d="M18 29.5v20h28v-20" />
+              <path class="logo-door" d="M28 49.5v-13h8v13" />
+              <path class="logo-spark" d="M43.5 13.5v7M40 17h7" />
+            </svg>
+          </span>
+          <span class="brand-text">MAISON DIRECT</span>
+        </a>
+        <div class="tagline">Des solutions rapides pour votre maison</div>
+      </header>
+
+      <div class="hero-content">
+        <h1>Un problème dans votre logement&nbsp;?</h1>
+        <p class="hero-text">Plomberie, fuite, chauffage, travaux ou énergie&nbsp;: accédez rapidement à une solution adaptée.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#solutions">Voir les solutions ↓</a>
+          <span class="secondary-note">Accès simple, rapide et sans engagement.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="solutions">
+      <h2 class="section-title">Quel est votre problème&nbsp;?</h2>
+      <p class="section-subtitle">Sélectionnez votre problème pour trouver rapidement une solution.</p>
+
+      <div class="solutions">
+        <a class="solution-card" href="https://ton-lien-affilie-plomberie" target="_blank" rel="nofollow sponsored noopener">
+          <div class="icon red">💧</div>
+          <div>
+            <h3>Plomberie / fuite</h3>
+            <p>Fuite, évier bouché, robinet ou chasse d’eau&nbsp;: trouvez une solution adaptée.</p>
+          </div>
+          <div class="arrow">›</div>
+        </a>
+
+        <a class="solution-card" href="https://ton-lien-affilie-chauffage" target="_blank" rel="nofollow sponsored noopener">
+          <div class="icon orange">🔥</div>
+          <div>
+            <h3>Chauffage / chaudière / eau chaude</h3>
+            <p>Chaudière, ballon d’eau chaude, chauffage en panne&nbsp;: trouvez une solution rapidement.</p>
+          </div>
+          <div class="arrow">›</div>
+        </a>
+
+        <a class="solution-card" href="https://ton-lien-affilie-travaux" target="_blank" rel="nofollow sponsored noopener">
+          <div class="icon blue">🔧</div>
+          <div>
+            <h3>Demander un devis travaux</h3>
+            <p>Rénovation, aménagement, réparation ou chantier&nbsp;: comparez plusieurs propositions.</p>
+          </div>
+          <div class="arrow">›</div>
+        </a>
+
+        <a class="solution-card" href="https://ton-lien-affilie-energie" target="_blank" rel="nofollow sponsored noopener">
+          <div class="icon green">⚡</div>
+          <div>
+            <h3>Comparer mes offres énergie</h3>
+            <p>Électricité ou gaz&nbsp;: trouvez une offre plus adaptée à votre consommation.</p>
+          </div>
+          <div class="arrow">›</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section trust-section">
+      <h2 class="section-title">Maison Direct vous oriente simplement</h2>
+      <p class="section-subtitle">Choisissez votre besoin et accédez à une solution partenaire adaptée, sans engagement.</p>
+
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon">⏱️</div>
+          <h4>Rapide</h4>
+          <p>Accédez directement à une solution selon votre besoin.</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">✅</div>
+          <h4>Adapté</h4>
+          <p>Choisissez la situation qui correspond à votre besoin.</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🔓</div>
+          <h4>Sans engagement</h4>
+          <p>Vous êtes libre de comparer les solutions proposées.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <strong>Maison Direct</strong> est un service de mise en relation. Les prestations sont réalisées par des partenaires externes. Certains liens peuvent être affiliés.
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
