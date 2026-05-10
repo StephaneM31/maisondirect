@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maison Direct — Sinistre en cours ou protection logement</title>
+  <meta name="description" content="Fuite, panne, porte bloquée, chauffage, engorgement ou nuisibles : Maison Direct vous aide à trouver une solution adaptée pour votre logement." />
+  <link rel="canonical" href="https://maisondirect.fr/" />
+  <meta name="theme-color" content="#071f3f" />
+
+  <meta name="google-site-verification" content="CO3BE5B6HIOyjZbg43WKx-tHT9hFUjJmgE0lmwUUpAU" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Maison Direct — Solutions habitation" />
+  <meta property="og:description" content="Sinistre en cours ou protection logement : accédez rapidement à une solution adaptée pour votre habitation." />
+  <meta property="og:url" content="https://maisondirect.fr/" />
+  <meta property="og:image" content="https://maisondirect.fr/assets/img/og-maison-direct.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <link rel="preload" as="image" href="assets/img/plombier-sous-evier-1200.webp" imagesrcset="assets/img/plombier-sous-evier-800.webp 800w, assets/img/plombier-sous-evier-1200.webp 1200w, assets/img/plombier-sous-evier-1672.webp 1672w" imagesizes="100vw" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Maison Direct",
+    "url": "https://maisondirect.fr/",
+    "description": "Service d’orientation pour les besoins liés au logement : dépannage à domicile, protection, assurance habitation et énergie."
+  }
+  </script>
+
+  <!-- Google Analytics chargé après consentement utilisateur -->
+  <script>
+    window.MAISON_DIRECT_GA_ID = "G-NZTEHQL3BE";
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    function loadMaisonDirectAnalytics() {
+      if (window.maisonDirectAnalyticsLoaded) return;
+      window.maisonDirectAnalyticsLoaded = true;
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=" + window.MAISON_DIRECT_GA_ID;
+      document.head.appendChild(s);
+      gtag("js", new Date());
+      gtag("config", window.MAISON_DIRECT_GA_ID, { anonymize_ip: true });
+    }
+  </script>
+
+  <style>
+    :root {
+      --blue: #1769ff;
+      --blue-dark: #071f3f;
+      --green: #28a65a;
+      --orange: #ff9f1c;
+      --red: #ef3e36;
+      --bg: #f4f7fb;
+      --text: #0b2341;
+      --muted: #617083;
+      --card: #ffffff;
+      --border: #e4ebf3;
+      --shadow: 0 22px 60px rgba(7, 31, 63, 0.14);
+      --soft-shadow: 0 14px 38px rgba(7, 31, 63, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 78vh;
+      padding: 34px 6vw 86px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #071f3f;
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+      display: block;
+      overflow: hidden;
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right center;
+      transform: scale(1.02);
+      display: block;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg,
+          rgba(7, 31, 63, 0.96) 0%,
+          rgba(7, 31, 63, 0.86) 34%,
+          rgba(7, 31, 63, 0.52) 62%,
+          rgba(7, 31, 63, 0.14) 100%),
+        linear-gradient(180deg,
+          rgba(7, 31, 63, 0.16) 0%,
+          rgba(7, 31, 63, 0.02) 48%,
+          rgba(244, 247, 251, 0.96) 100%);
+      pointer-events: none;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .brand-logo {
+      height: 64px;
+      width: auto;
+      display: block;
+      filter: drop-shadow(0 2px 12px rgba(0,0,0,0.24));
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 950;
+      font-size: 25px;
+      letter-spacing: -0.045em;
+      color: #ffffff;
+      text-shadow: 0 2px 18px rgba(0,0,0,0.24);
+      white-space: nowrap;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+    }
+
+    .brand-text {
+      display: inline-flex;
+      align-items: center;
+      height: 38px;
+      line-height: 1;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      display: block;
+      filter: drop-shadow(0 2px 12px rgba(0,0,0,0.24));
+    }
+
+    .logo-roof,
+    .logo-house,
+    .logo-door,
+    .logo-spark {
+      fill: none;
+      stroke: #ffffff;
+      stroke-width: 5.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .logo-spark {
+      stroke-width: 4.4;
+      opacity: 0.95;
+    }
+
+    .tagline {
+      color: rgba(255,255,255,0.92);
+      font-size: 17px;
+      font-weight: 750;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.28);
+    }
+
+    .hero-content {
+      width: min(820px, 100%);
+      margin: 92px 0 0;
+      text-align: left;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(46px, 7vw, 88px);
+      line-height: 0.96;
+      letter-spacing: -0.075em;
+      color: #ffffff;
+      text-shadow: 0 6px 34px rgba(0,0,0,0.34);
+      max-width: 900px;
+    }
+
+
+    h1 span {
+      color: #8bbcff;
+    }
+
+    .hero-text {
+      margin: 30px 0 0;
+      font-size: clamp(21px, 2.2vw, 31px);
+      line-height: 1.45;
+      color: rgba(255,255,255,0.92);
+      max-width: 820px;
+      text-shadow: 0 3px 24px rgba(0,0,0,0.32);
+    }
+
+    .hero-actions {
+      margin-top: 36px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .primary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--blue);
+      color: #ffffff;
+      border-radius: 16px;
+      padding: 18px 28px;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      box-shadow: 0 16px 36px rgba(23,105,255,0.34);
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: #0f5de6;
+      box-shadow: 0 22px 46px rgba(23,105,255,0.42);
+    }
+
+    .secondary-note {
+      color: rgba(255,255,255,0.78);
+      font-size: 15px;
+      font-weight: 650;
+      text-shadow: 0 2px 14px rgba(0,0,0,0.28);
+    }
+
+    #solutions { scroll-margin-top: 24px; }
+
+    .section { padding: 76px 6vw; }
+
+    .section.white {
+      background: var(--bg);
+      padding-top: 44px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(32px, 4vw, 48px);
+      letter-spacing: -0.06em;
+      margin: 0 0 13px;
+      color: var(--blue-dark);
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 42px;
+      font-size: 18px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .solutions {
+      width: min(1060px, 100%);
+      margin: 0 auto;
+      display: grid;
+      gap: 18px;
+    }
+
+    .solution-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 82px 1fr 56px;
+      gap: 24px;
+      align-items: center;
+      padding: 26px;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(228,235,243,0.95);
+      border-radius: 28px;
+      box-shadow: var(--soft-shadow);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+      overflow: hidden;
+    }
+
+    .solution-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity .18s ease;
+      background: linear-gradient(135deg, rgba(23,105,255,0.08), rgba(255,255,255,0));
+      pointer-events: none;
+    }
+
+    .solution-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+      border-color: rgba(23,105,255,0.28);
+      background: #ffffff;
+    }
+
+    .solution-card:hover::before { opacity: 1; }
+
+    .icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 25px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 38px;
+      font-weight: 900;
+      box-shadow: 0 14px 32px rgba(7,31,63,0.14);
+      position: relative;
+      z-index: 1;
+    }
+
+    .red { background: linear-gradient(135deg, var(--red), #ff7c6d); }
+    .orange { background: linear-gradient(135deg, var(--orange), #ffc766); }
+    .blue { background: linear-gradient(135deg, var(--blue), #56a0ff); }
+    .green { background: linear-gradient(135deg, var(--green), #79dc80); }
+
+    .solution-card h3 {
+      margin: 0 0 8px;
+      font-size: clamp(23px, 3vw, 31px);
+      letter-spacing: -0.045em;
+      color: var(--blue-dark);
+      position: relative;
+      z-index: 1;
+    }
+
+    .solution-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.5;
+      position: relative;
+      z-index: 1;
+    }
+
+    .arrow {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: rgba(23,105,255,0.1);
+      display: grid;
+      place-items: center;
+      color: var(--blue);
+      font-size: 30px;
+      font-weight: 900;
+      position: relative;
+      z-index: 1;
+      transition: transform .18s ease, background .18s ease;
+    }
+
+    .solution-card:hover .arrow {
+      transform: translateX(3px);
+      background: rgba(23,105,255,0.16);
+    }
+
+    .trust-section {
+      background:
+        radial-gradient(circle at 20% 0%, rgba(23,105,255,0.09), transparent 36%),
+        radial-gradient(circle at 80% 100%, rgba(40,166,90,0.08), transparent 34%),
+        #ffffff;
+    }
+
+    .trust-grid {
+      width: min(1060px, 100%);
+      margin: 42px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .trust-item {
+      background: rgba(255,255,255,0.9);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 32px 26px;
+      text-align: center;
+      box-shadow: 0 12px 34px rgba(7,31,63,0.06);
+    }
+
+    .trust-item .trust-icon {
+      width: 64px;
+      height: 64px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 16px;
+      font-size: 32px;
+      border-radius: 22px;
+      background: rgba(23,105,255,0.08);
+    }
+
+    .trust-item h4 {
+      margin: 0 0 9px;
+      font-size: 21px;
+      color: var(--blue-dark);
+      letter-spacing: -0.03em;
+    }
+
+    .trust-item p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.58;
+    }
+
+    .footer {
+      padding: 30px 6vw;
+      background: var(--blue-dark);
+      color: white;
+      font-size: 14px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .footer-inner {
+      width: min(1060px, 100%);
+      margin: 0 auto;
+      opacity: 0.92;
+      text-align: center;
+    }
+
+    .footer-inner p {
+      margin: 0;
+    }
+
+    @media (max-width: 820px) {
+      .hero {
+        min-height: 74vh;
+        padding: 24px 24px 62px;
+      }
+
+      .hero-media img {
+        object-position: 62% center;
+        transform: scale(1.03);
+      }
+
+      .hero::after {
+        background:
+          linear-gradient(180deg,
+            rgba(7,31,63,0.93) 0%,
+            rgba(7,31,63,0.76) 52%,
+            rgba(7,31,63,0.34) 78%,
+            rgba(244,247,251,0.94) 100%);
+      }
+
+      .tagline { display: none; }
+      .brand-logo { height: 52px; }
+
+      .brand-logo {
+      height: 64px;
+      width: auto;
+      display: block;
+      filter: drop-shadow(0 2px 12px rgba(0,0,0,0.24));
+    }
+
+    .brand { font-size: 22px; gap: 10px; }
+
+      .brand-icon { width: 34px; height: 34px; }
+
+      .brand-text { height: 34px; }
+
+      .logo-mark { width: 31px; height: 31px; }
+
+      .hero-content { margin-top: 58px; }
+
+      h1 { font-size: clamp(42px, 12vw, 64px); }
+
+  
+    h1 span {
+      color: #8bbcff;
+    }
+
+    .hero-text { font-size: 20px; }
+
+      .primary-btn {
+        width: 100%;
+        padding: 17px 22px;
+        font-size: 18px;
+      }
+
+      .secondary-note { width: 100%; }
+
+      .section { padding: 58px 22px; }
+
+      .section.white { padding-top: 34px; }
+
+      .solution-card {
+        grid-template-columns: 64px 1fr;
+        padding: 20px;
+        gap: 16px;
+        border-radius: 24px;
+      }
+
+      .icon {
+        width: 64px;
+        height: 64px;
+        font-size: 30px;
+        border-radius: 20px;
+      }
+
+      .arrow { display: none; }
+
+      .trust-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Cookie banner — sous la topbar, bloque la navigation */
+    .cookie-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 8998;
+      background: rgba(7,31,63,0.45);
+      backdrop-filter: blur(2px);
+    }
+    .cookie-banner {
+      position: fixed;
+      top: 108px; left: 50%; transform: translateX(-50%);
+      z-index: 8999;
+      width: min(760px, calc(100% - 40px));
+      background: var(--blue-dark);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 20px 24px;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      box-shadow: 0 12px 40px rgba(7,31,63,0.45);
+    }
+    .cookie-banner p { margin: 0; color: rgba(255,255,255,0.88); font-size: 14px; line-height: 1.55; flex: 1; min-width: 200px; }
+    .cookie-banner p a { color: #8bbcff; text-decoration: underline; }
+    .cookie-actions { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+    .cookie-btn-accept { border: 0; border-radius: 999px; padding: 10px 22px; font-weight: 800; font-size: 14px; cursor: pointer; font-family: inherit; background: var(--blue); color: #fff; box-shadow: 0 4px 14px rgba(23,105,255,0.4); transition: transform .15s, opacity .15s; white-space: nowrap; }
+    .cookie-btn-accept:hover { transform: scale(1.03); }
+    .cookie-btn-refuse { border: 0; background: transparent; color: rgba(255,255,255,0.45); font-size: 12px; font-weight: 500; cursor: pointer; font-family: inherit; padding: 4px 0; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; transition: color .15s; }
+    .cookie-btn-refuse:hover { color: rgba(255,255,255,0.75); }
+    .footer-links { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; margin-top: 12px; font-size: .92rem; }
+    .footer-links a { color: rgba(255,255,255,.82); text-decoration: underline; text-underline-offset: 3px; }
+    @media (max-width: 720px) {
+      .cookie-banner { top: 96px; padding: 16px 18px; }
+      .cookie-actions { width: 100%; justify-content: space-between; }
+    }
+
+    /* Final Maison Direct layout */
+    .solutions {
+      width: min(1120px, 100%) !important;
+      margin: 0 auto !important;
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 24px !important;
+      align-items: stretch !important;
+    }
+
+    .solution-card {
+      position: relative !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 18px !important;
+      padding: 30px !important;
+      background: rgba(255,255,255,0.94) !important;
+      border: 1px solid rgba(228,235,243,0.95) !important;
+      border-radius: 30px !important;
+      box-shadow: var(--soft-shadow) !important;
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease !important;
+      overflow: hidden !important;
+      min-height: 100% !important;
+    }
+
+    .solution-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .solution-body {
+      position: relative;
+      z-index: 1;
+    }
+
+    .solution-card h3 {
+      margin: 0 0 8px !important;
+    }
+
+    .solution-card p {
+      margin: 0 !important;
+    }
+
+    .partner-banner {
+      display: inline-flex;
+      align-self: center;
+      justify-content: center;
+      line-height: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(228,235,243,.95);
+      background: #fff;
+      box-shadow: 0 12px 28px rgba(7,31,63,0.08);
+      transition: transform .18s ease, box-shadow .18s ease;
+      max-width: 100%;
+    }
+
+    .partner-banner:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 38px rgba(7,31,63,0.13);
+    }
+
+    .partner-banner img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .partner-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      min-height: 50px;
+      padding: 0 20px;
+      border-radius: 15px;
+      font-weight: 900;
+      color: #fff;
+      box-shadow: 0 12px 28px rgba(7,31,63,0.12);
+      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+      position: relative;
+      z-index: 1;
+      width: fit-content;
+      text-align: center;
+    }
+
+    .partner-cta:hover {
+      transform: translateY(-2px);
+      filter: saturate(1.08);
+      box-shadow: 0 18px 38px rgba(7,31,63,0.16);
+    }
+
+    .partner-cta.red-btn { background: linear-gradient(135deg, var(--red), #ff7c6d); }
+    .partner-cta.blue-btn { background: linear-gradient(135deg, var(--blue), #56a0ff); }
+
+    .bottom-partner-inline {
+      text-align: center;
+      margin: 44px auto 0;
+    }
+
+    .bottom-partner-inline a {
+      display: inline-flex;
+      line-height: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 16px 42px rgba(7,31,63,.10);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .bottom-partner-inline a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 22px 52px rgba(7,31,63,.15);
+    }
+
+    .bottom-partner-inline img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 820px) {
+      .solutions {
+        grid-template-columns: 1fr !important;
+      }
+      .solution-card {
+        padding: 22px !important;
+      }
+      .solution-head {
+        gap: 16px;
+      }
+    }
+
+  
+    /* Header final : vraie navbar blanche */
+    .hero {
+      padding-top: 0;
+    }
+
+    .topbar{
+      position:relative;
+      top:auto;
+      left:auto;
+      width:100%;
+      z-index:50;
+      padding:0;
+      background:#ffffff;
+      border-bottom:1px solid rgba(228,235,243,.95);
+      box-shadow:0 8px 28px rgba(7,31,63,.08);
+    }
+
+    .topbar-inner{
+      width:min(1180px,92%);
+      min-height:104px;
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+    }
+
+    .topbar .brand{
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      background:transparent;
+      padding:0;
+      border-radius:0;
+      box-shadow:none;
+      backdrop-filter:none;
+      color:inherit;
+      text-shadow:none;
+    }
+
+    .topbar .brand-logo{
+      height:86px;
+      width:auto;
+      display:block;
+      filter:none;
+    }
+
+    .topbar-slogan{
+      color:#0b2341;
+      font-size:16px;
+      font-weight:850;
+      background:transparent;
+      padding:0;
+      border-radius:0;
+      box-shadow:none;
+      backdrop-filter:none;
+      text-shadow:none;
+      text-align:right;
+    }
+
+    @media(max-width:900px){
+      .topbar-inner{
+        min-height:88px;
+      }
+
+      .topbar .brand-logo{
+        height:68px;
+      }
+
+      .topbar-slogan{
+        display:none;
+      }
+    }
+
+  
+    /* Hero final premium */
+    .hero {
+      min-height: 680px;
+      padding: 0 6vw 78px;
+    }
+
+    .hero-content {
+      width: min(760px, 100%);
+      margin: 82px 0 0;
+    }
+
+    h1 {
+      font-size: clamp(44px, 5.8vw, 76px);
+      line-height: 1;
+      letter-spacing: -0.07em;
+      max-width: 860px;
+    }
+
+    h1 span {
+      color: #8bbcff;
+    }
+
+    .hero-text {
+      margin-top: 24px;
+      font-size: clamp(19px, 1.8vw, 25px);
+      max-width: 680px;
+      line-height: 1.45;
+    }
+
+    .hero-actions {
+      margin-top: 32px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .primary-btn {
+      border-radius: 16px;
+      padding: 17px 24px;
+      font-size: 18px;
+      font-weight: 900;
+      box-shadow: 0 16px 36px rgba(7,31,63,0.22);
+      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      filter: saturate(1.08);
+      box-shadow: 0 22px 46px rgba(7,31,63,0.30);
+    }
+
+    .primary-btn-red {
+      background: linear-gradient(135deg, var(--red), #ff7c6d);
+      color: #fff;
+    }
+
+    .primary-btn-blue {
+      background: linear-gradient(135deg, var(--blue), #56a0ff);
+      color: #fff;
+    }
+
+    .topbar-inner {
+      min-height: 96px;
+    }
+
+    .topbar .brand-logo {
+      height: 92px;
+    }
+
+    .topbar-slogan {
+      font-size: 15px;
+      opacity: .95;
+    }
+
+    .section.white {
+      padding-top: 62px;
+    }
+
+    @media (max-width: 820px) {
+      .hero {
+        min-height: auto;
+        padding: 0 24px 58px;
+      }
+
+      .hero-content {
+        margin-top: 54px;
+      }
+
+      h1 {
+        font-size: clamp(40px, 11vw, 58px);
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .primary-btn {
+        width: 100%;
+      }
+
+      .topbar .brand-logo {
+        height: 68px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <main class="page">
+
+
+      <header class="topbar">
+        <div class="topbar-inner">
+          <a href="index.html" class="brand" aria-label="Maison Direct accueil">
+            <img class="brand-logo" src="assets/icons/maison-direct-navbar.png" alt="Maison Direct">
+          </a>
+
+          <div class="topbar-slogan">
+            Des solutions efficaces pour votre maison
+          </div>
+        </div>
+      </header>
+    <section class="hero">
+      <picture class="hero-media">
+        <source type="image/webp" srcset="assets/img/plombier-sous-evier-800.webp 800w, assets/img/plombier-sous-evier-1200.webp 1200w, assets/img/plombier-sous-evier-1672.webp 1672w" sizes="100vw" />
+        <img src="assets/img/plombier-sous-evier-1200.webp" alt="Plombier réparant une canalisation sous un évier" width="1672" height="941" fetchpriority="high" decoding="async" />
+      </picture>
+
+      <div class="hero-content">
+        <h1>Une urgence dans votre logement&nbsp;?<br><span>Des solutions pour aujourd’hui comme pour demain&nbsp;</span></h1>
+        <p class="hero-text">Plomberie, électricité, chauffage, serrurerie, nuisibles, dégâts des eaux… Accédez rapidement à la solution adaptée à votre situation.</p>
+        <div class="hero-actions">
+          <a class="primary-btn primary-btn-red" href="https://www.awin1.com/cread.php?s=3713066&v=102417&q=497792&r=2876943" target="_blank" rel="nofollow sponsored noopener" data-partner="mesbonspros-hero">J’ai un problème maintenant</a>
+          <a class="primary-btn primary-btn-blue" href="https://www.awin1.com/cread.php?s=3311099&v=30641&q=439134&r=2876943" target="_blank" rel="nofollow sponsored noopener" data-partner="homeserve-hero">Je veux protéger mon logement</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="solutions" aria-labelledby="solutions-title">
+      <h2 class="section-title" id="solutions-title">Choisissez votre situation</h2>
+      <p class="section-subtitle">Deux parcours simples&nbsp;: une solution d’intervention immédiate ou une protection pour anticiper les prochaines pannes.</p>
+
+      
+      <div class="solutions">
+        <article class="solution-card" data-partner="mesbonspros">
+          <div class="solution-head">
+            <div class="icon red" aria-hidden="true">🔧</div>
+            <div class="solution-body">
+              <h3>Sinistre en cours</h3>
+              <p>Fuite d’eau, engorgement, panne électrique, chauffage, serrurerie ou nuisibles&nbsp;: accédez rapidement à une solution d’intervention adaptée.</p>
+            </div>
+          </div>
+
+          <a class="partner-banner" data-partner="mesbonspros" href="https://www.awin1.com/cread.php?s=3713066&v=102417&q=497792&r=2876943" target="_blank" rel="nofollow sponsored noopener" aria-label="Accéder à MesBonsPros">
+            <img src="https://www.awin1.com/cshow.php?s=3713066&v=102417&q=497792&r=2876943" alt="MesBonsPros — solution d’intervention habitation" />
+          </a>
+
+          <a class="partner-cta red-btn" href="https://www.awin1.com/cread.php?s=3713066&v=102417&q=497792&r=2876943" target="_blank" rel="nofollow sponsored noopener" data-partner="mesbonspros">Trouver une solution maintenant</a>
+        </article>
+
+        <article class="solution-card" data-partner="homeserve">
+          <div class="solution-head">
+            <div class="icon orange" aria-hidden="true">🛡️</div>
+            <div class="solution-body">
+              <h3>Protéger mon logement</h3>
+              <p>Anticipez les pannes et évitez les mauvaises surprises grâce à une solution de protection habitation pour votre logement.</p>
+            </div>
+          </div>
+
+          <a class="partner-banner" data-partner="homeserve" href="https://www.awin1.com/cread.php?s=3311099&v=30641&q=439134&r=2876943" target="_blank" rel="nofollow sponsored noopener" aria-label="Accéder aux protections HomeServe">
+            <img src="https://www.awin1.com/cshow.php?s=3311099&v=30641&q=439134&r=2876943" alt="HomeServe — protection logement" />
+          </a>
+
+          <a class="partner-cta blue-btn" href="https://www.awin1.com/cread.php?s=3311099&v=30641&q=439134&r=2876943" target="_blank" rel="nofollow sponsored noopener" data-partner="homeserve">Découvrir les protections logement</a>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="section trust-section" aria-labelledby="trust-title">
+      <h2 class="section-title" id="trust-title">Maison Direct vous oriente simplement</h2>
+      <p class="section-subtitle">Une orientation simple vers des solutions adaptées à votre logement, sans engagement.</p>
+
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon">⏱️</div>
+          <h4>Rapide</h4>
+          <p>Accédez rapidement à une solution adaptée à votre situation.</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">✅</div>
+          <h4>Adapté</h4>
+          <p>Choisissez une solution cohérente avec votre problème logement.</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🔓</div>
+          <h4>Sans engagement</h4>
+          <p>Vous êtes libre de comparer les solutions proposées.</p>
+        </div>
+      </div>
+
+      <div class="bottom-partner-inline">
+        <a rel="sponsored nofollow noopener" href="https://www.awin1.com/cread.php?s=3160383&v=30641&q=439132&r=2876943" target="_blank" data-partner="homeserve-bottom">
+          <img src="https://www.awin1.com/cshow.php?s=3160383&v=30641&q=439132&r=2876943" alt="HomeServe — protection logement">
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <p><strong>Maison Direct</strong> © <span id="current-year"></span></p>
+        <nav class="footer-links" aria-label="Liens légaux">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="politique-confidentialite.html">Confidentialité</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+
+
+  <div class="cookie-overlay" id="cookie-overlay"></div>
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Gestion des cookies">
+    <p>🍪 Maison Direct utilise Google Analytics pour mesurer son audience de façon anonyme. Aucune donnée personnelle n’est partagée. <a href="politique-confidentialite.html">En savoir plus</a></p>
+    <div class="cookie-actions">
+      <button class="cookie-btn-accept" type="button" id="cookie-accept">✓ Accepter</button>
+      <button class="cookie-btn-refuse" type="button" id="cookie-refuse">Refuser</button>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('[data-partner]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        var partner = link.getAttribute('data-partner');
+        if (window.gtag) {
+          gtag('event', 'click_partenaire', {
+            event_category: 'Affiliation',
+            event_label: partner
+          });
+        }
+      });
+    });
+  </script>
+  <script>
+    (function() {
+      var banner = document.getElementById("cookie-banner");
+      var accept = document.getElementById("cookie-accept");
+      var refuse = document.getElementById("cookie-refuse");
+      var KEY = "md_consent";
+
+      function setCookie(val, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + days * 864e5);
+        document.cookie = KEY + "=" + val + ";expires=" + d.toUTCString() + ";path=/;SameSite=Lax";
+      }
+
+      function getCookie() {
+        var m = document.cookie.match(new RegExp("(^| )" + KEY + "=([^;]+)"));
+        return m ? m[2] : null;
+      }
+
+      var overlay = document.getElementById("cookie-overlay");
+      function showBanner() {
+        banner.style.display = "flex";
+        if (overlay) overlay.style.display = "block";
+      }
+      function hideBanner() {
+        banner.style.display = "none";
+        if (overlay) overlay.style.display = "none";
+      }
+
+      var consent = getCookie();
+      if (consent === "accepted") { loadMaisonDirectAnalytics(); }
+      else if (!consent && banner) { showBanner(); }
+
+      if (accept) accept.addEventListener("click", function() {
+        setCookie("accepted", 365);
+        hideBanner();
+        loadMaisonDirectAnalytics();
+      });
+      if (refuse) refuse.addEventListener("click", function() {
+        setCookie("refused", 180);
+        hideBanner();
+      });
+    })();
+  </script>
+<script>document.getElementById("current-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
